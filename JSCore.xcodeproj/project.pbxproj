@@ -19,6 +19,8 @@
 		AD5B8144192E1E2300A7CDD2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD5B812C192E1E2300A7CDD2 /* UIKit.framework */; };
 		AD5B814C192E1E2300A7CDD2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD5B814A192E1E2300A7CDD2 /* InfoPlist.strings */; };
 		AD5B814E192E1E2300A7CDD2 /* JSCoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B814D192E1E2300A7CDD2 /* JSCoreTests.m */; };
+		AD5B8158192E203400A7CDD2 /* JS in Resources */ = {isa = PBXBuildFile; fileRef = AD5B8157192E203300A7CDD2 /* JS */; };
+		AD5B815B192E208D00A7CDD2 /* JCCore.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B815A192E208D00A7CDD2 /* JCCore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,9 @@
 		AD5B8149192E1E2300A7CDD2 /* JSCoreTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JSCoreTests-Info.plist"; sourceTree = "<group>"; };
 		AD5B814B192E1E2300A7CDD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AD5B814D192E1E2300A7CDD2 /* JSCoreTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSCoreTests.m; sourceTree = "<group>"; };
+		AD5B8157192E203300A7CDD2 /* JS */ = {isa = PBXFileReference; lastKnownFileType = folder; path = JS; sourceTree = "<group>"; };
+		AD5B8159192E208D00A7CDD2 /* JCCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCCore.h; sourceTree = "<group>"; };
+		AD5B815A192E208D00A7CDD2 /* JCCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCCore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,10 +112,13 @@
 		AD5B812E192E1E2300A7CDD2 /* JSCore */ = {
 			isa = PBXGroup;
 			children = (
+				AD5B8157192E203300A7CDD2 /* JS */,
 				AD5B8137192E1E2300A7CDD2 /* JCAppDelegate.h */,
 				AD5B8138192E1E2300A7CDD2 /* JCAppDelegate.m */,
 				AD5B813A192E1E2300A7CDD2 /* Images.xcassets */,
 				AD5B812F192E1E2300A7CDD2 /* Supporting Files */,
+				AD5B8159192E208D00A7CDD2 /* JCCore.h */,
+				AD5B815A192E208D00A7CDD2 /* JCCore.m */,
 			);
 			path = JSCore;
 			sourceTree = "<group>";
@@ -221,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD5B8133192E1E2300A7CDD2 /* InfoPlist.strings in Resources */,
+				AD5B8158192E203400A7CDD2 /* JS in Resources */,
 				AD5B813B192E1E2300A7CDD2 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,6 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD5B815B192E208D00A7CDD2 /* JCCore.m in Sources */,
 				AD5B8135192E1E2300A7CDD2 /* main.m in Sources */,
 				AD5B8139192E1E2300A7CDD2 /* JCAppDelegate.m in Sources */,
 			);
