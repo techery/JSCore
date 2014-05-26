@@ -1,0 +1,25 @@
+{
+  "name": "brain",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Sergey Zenchenko",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "~3.6.2",
+    "gulp-coffee": "~1.4.3",
+    "gulp-util": "~2.2.14",
+    "gulp-concat": "~2.2.0",
+    "gulp-mocha": "~0.4.1",
+    "mocha": "~1.19.0",
+    "gulp-clean": "~0.2.4",
+    "vinyl-transform": "0.0.1",
+    "gulp-tap": "~0.1.1",
+    "event-stream": "~3.1.5"
+  },
+  "dependencies": {
+    "underscore": "~1.6.0",
+    "javascript-state-machine": "~2.3.2"
+  }
+}

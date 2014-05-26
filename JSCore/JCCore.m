@@ -7,71 +7,56 @@
 //
 
 #import "JCCore.h"
-@import JavaScriptCore;
+#import "JCConsoleModule.h"
+#import "JCRequireModule.h"
+#import "JCExceptionHandlerModule.h"
+#import "JCFSModule.h"
+#import "JCTimeoutModule.h"
+#import "JCLocalStorageModule.h"
+#import "JCXMLHttpRequestModule.h"
 
-@interface JCCore()
+@interface JCCore() <JCRequireModuleDelegate>
 
-@property (nonatomic, strong) NSString *rootFolder;
+@property (nonatomic, strong) NSBundle *bundle;
 @property (nonatomic, strong) JSContext *jsContext;
+@property (nonatomic, strong) NSMutableArray *modules;
 
 @end
 
 @implementation JCCore
 
-- (instancetype)initWithRootFolder:(NSString *)rootFolder mainFile:(NSString *)mainFile
+- (instancetype)initWithBundle:(NSBundle *)bundle
 {
-    NSParameterAssert(rootFolder.length > 0);
-    NSParameterAssert(mainFile.length > 0);
+    NSParameterAssert(bundle != nil);
 
     self = [super init];
     if (self) {
+        self.bundle = bundle;
+        self.modules = [NSMutableArray new];
         self.jsContext = [JSContext new];
+        self.jsContext[@"__modules"] = @{};
         
-        __weak typeof(self) weekSelf = self;
+        [self addModule:[JCExceptionHandlerModule new]];
+        [self addModule:[JCConsoleModule new]];
+        [self addModule:[JCTimeoutModule new]];
+        [self addModule:[JCLocalStorageModule new]];
+        [self addModule:[JCXMLHttpRequestModule new]];
         
-        self.jsContext[@"require"] = ^(NSString *filePath) {
-            return [weekSelf requireFile:filePath];
-        };
-        
-        self.jsContext[@"log"] = ^(id obj) {
-            NSLog(@"Log:%@", obj);
-        };
-        
-        self.rootFolder = rootFolder;
-        [self requireFile:mainFile];
-        
-        JSValue *function = self.jsContext[@"bla"];
-        
-        [function callWithArguments:@[^{
-            NSLog(@"qqq");
-        }]];
+        [self addModule:[[JCFSModule alloc] initWithBundle:bundle]];
+        [self addModule:[[JCRequireModule alloc] initWithBundle:bundle delegate:self]];
     }
     return self;
 }
 
-- (id)requireFile:(NSString *)filePath
+- (void)addModule:(id<JCModule>)module
 {
-    NSParameterAssert(filePath.length > 0);
+    [module attachToContext:self.jsContext];
+    [self.modules addObject:module];
+}
 
-    if ([[filePath pathExtension] isEqualToString:@""]) {
-        filePath = [filePath stringByAppendingString:@".js"];
-    }
-
-    NSString *fullPath = [self.rootFolder stringByAppendingPathComponent:filePath];
-    NSString *resourcePath = [[NSBundle mainBundle] pathForResource:fullPath ofType:nil];
-    NSLog(@"resource path: %@", resourcePath);
-
-    if (!resourcePath) {
-        return nil;
-    }
-    
-    NSString *fileContent = [NSString stringWithContentsOfURL:[NSURL fileURLWithPath:resourcePath]
-                                                     encoding:NSUTF8StringEncoding
-                                                        error:nil];
-    
-    NSString *jsModule = [NSString stringWithFormat:@"var exports = {};\n%@;\n exports;", fileContent];
-    
-    return [self.jsContext evaluateScript:jsModule];
+- (JSValue*)resolveModule:(NSString*)moduleName
+{
+    return self.jsContext[@"__modules"][moduleName];
 }
 
 @end

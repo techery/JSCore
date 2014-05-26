@@ -7,9 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "JCModule.h"
 
 @interface JCCore : NSObject
 
-- (instancetype)initWithRootFolder:(NSString *)rootFolder mainFile:(NSString *)mainFile;
+- (instancetype)initWithBundle:(NSBundle *)bundle;
+
+- (void)addModule:(id<JCModule>)module;
 
 @end

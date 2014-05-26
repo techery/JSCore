@@ -12,12 +12,15 @@
 @import JavaScriptCore;
 
 @implementation JCAppDelegate
-
+{
+    JCCore *core;
+}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    JCCore *core = [[JCCore alloc] initWithRootFolder:@"JS" mainFile:@"app.js"];
+    NSString *bundlePath = [[NSBundle mainBundle] pathForResource:@"brain" ofType:@"bundle"];
+    core = [[JCCore alloc] initWithBundle:[NSBundle bundleWithPath:bundlePath]];
     
     [self.window makeKeyAndVisible];
     return YES;

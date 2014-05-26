@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD3C8DF719332B4200A42148 /* brain.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AD3C8DF619332B4200A42148 /* brain.bundle */; };
 		AD5B8129192E1E2300A7CDD2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD5B8128192E1E2300A7CDD2 /* Foundation.framework */; };
 		AD5B812B192E1E2300A7CDD2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD5B812A192E1E2300A7CDD2 /* CoreGraphics.framework */; };
 		AD5B812D192E1E2300A7CDD2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD5B812C192E1E2300A7CDD2 /* UIKit.framework */; };
@@ -19,8 +20,15 @@
 		AD5B8144192E1E2300A7CDD2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD5B812C192E1E2300A7CDD2 /* UIKit.framework */; };
 		AD5B814C192E1E2300A7CDD2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD5B814A192E1E2300A7CDD2 /* InfoPlist.strings */; };
 		AD5B814E192E1E2300A7CDD2 /* JSCoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B814D192E1E2300A7CDD2 /* JSCoreTests.m */; };
-		AD5B8158192E203400A7CDD2 /* JS in Resources */ = {isa = PBXBuildFile; fileRef = AD5B8157192E203300A7CDD2 /* JS */; };
 		AD5B815B192E208D00A7CDD2 /* JCCore.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B815A192E208D00A7CDD2 /* JCCore.m */; };
+		AD76E9A8193214D80096B676 /* JCLocalStorageModule.m in Sources */ = {isa = PBXBuildFile; fileRef = AD76E9A7193214D80096B676 /* JCLocalStorageModule.m */; };
+		AD76E9AC193228B10096B676 /* JCXMLHttpRequestModule.m in Sources */ = {isa = PBXBuildFile; fileRef = AD76E9AB193228B10096B676 /* JCXMLHttpRequestModule.m */; };
+		AD76E9AF19322A720096B676 /* JCXMLHttpRequestAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = AD76E9AE19322A720096B676 /* JCXMLHttpRequestAdapter.m */; };
+		ADB6CB131931FA2600B34BF8 /* JCConsoleModule.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB6CB121931FA2600B34BF8 /* JCConsoleModule.m */; };
+		ADB6CB161931FAB500B34BF8 /* JCRequireModule.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB6CB151931FAB500B34BF8 /* JCRequireModule.m */; };
+		ADB6CB1A1931FBAE00B34BF8 /* JCExceptionHandlerModule.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB6CB191931FBAE00B34BF8 /* JCExceptionHandlerModule.m */; };
+		ADB6CB1E1932012D00B34BF8 /* JCFSModule.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB6CB1D1932012D00B34BF8 /* JCFSModule.m */; };
+		ADB6CB2219320AA400B34BF8 /* JCTimeoutModule.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB6CB2119320AA400B34BF8 /* JCTimeoutModule.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AD3C8DF619332B4200A42148 /* brain.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = brain.bundle; path = brain/brain.bundle; sourceTree = SOURCE_ROOT; };
 		AD5B8125192E1E2300A7CDD2 /* JSCore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSCore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD5B8128192E1E2300A7CDD2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AD5B812A192E1E2300A7CDD2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -50,9 +59,25 @@
 		AD5B8149192E1E2300A7CDD2 /* JSCoreTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JSCoreTests-Info.plist"; sourceTree = "<group>"; };
 		AD5B814B192E1E2300A7CDD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AD5B814D192E1E2300A7CDD2 /* JSCoreTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSCoreTests.m; sourceTree = "<group>"; };
-		AD5B8157192E203300A7CDD2 /* JS */ = {isa = PBXFileReference; lastKnownFileType = folder; path = JS; sourceTree = "<group>"; };
 		AD5B8159192E208D00A7CDD2 /* JCCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCCore.h; sourceTree = "<group>"; };
 		AD5B815A192E208D00A7CDD2 /* JCCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCCore.m; sourceTree = "<group>"; };
+		AD76E9A6193214D80096B676 /* JCLocalStorageModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCLocalStorageModule.h; sourceTree = "<group>"; };
+		AD76E9A7193214D80096B676 /* JCLocalStorageModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCLocalStorageModule.m; sourceTree = "<group>"; };
+		AD76E9AA193228B10096B676 /* JCXMLHttpRequestModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCXMLHttpRequestModule.h; sourceTree = "<group>"; };
+		AD76E9AB193228B10096B676 /* JCXMLHttpRequestModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCXMLHttpRequestModule.m; sourceTree = "<group>"; };
+		AD76E9AD19322A720096B676 /* JCXMLHttpRequestAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCXMLHttpRequestAdapter.h; sourceTree = "<group>"; };
+		AD76E9AE19322A720096B676 /* JCXMLHttpRequestAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCXMLHttpRequestAdapter.m; sourceTree = "<group>"; };
+		ADB6CB0E1931F9A700B34BF8 /* JCModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JCModule.h; sourceTree = "<group>"; };
+		ADB6CB111931FA2600B34BF8 /* JCConsoleModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCConsoleModule.h; sourceTree = "<group>"; };
+		ADB6CB121931FA2600B34BF8 /* JCConsoleModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCConsoleModule.m; sourceTree = "<group>"; };
+		ADB6CB141931FAB500B34BF8 /* JCRequireModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCRequireModule.h; sourceTree = "<group>"; };
+		ADB6CB151931FAB500B34BF8 /* JCRequireModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCRequireModule.m; sourceTree = "<group>"; };
+		ADB6CB181931FBAE00B34BF8 /* JCExceptionHandlerModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCExceptionHandlerModule.h; sourceTree = "<group>"; };
+		ADB6CB191931FBAE00B34BF8 /* JCExceptionHandlerModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCExceptionHandlerModule.m; sourceTree = "<group>"; };
+		ADB6CB1C1932012D00B34BF8 /* JCFSModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCFSModule.h; sourceTree = "<group>"; };
+		ADB6CB1D1932012D00B34BF8 /* JCFSModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCFSModule.m; sourceTree = "<group>"; };
+		ADB6CB2019320AA400B34BF8 /* JCTimeoutModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCTimeoutModule.h; sourceTree = "<group>"; };
+		ADB6CB2119320AA400B34BF8 /* JCTimeoutModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCTimeoutModule.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +137,8 @@
 		AD5B812E192E1E2300A7CDD2 /* JSCore */ = {
 			isa = PBXGroup;
 			children = (
-				AD5B8157192E203300A7CDD2 /* JS */,
+				AD3C8DF619332B4200A42148 /* brain.bundle */,
+				ADB6CB0C1931F99900B34BF8 /* Code */,
 				AD5B8137192E1E2300A7CDD2 /* JCAppDelegate.h */,
 				AD5B8138192E1E2300A7CDD2 /* JCAppDelegate.m */,
 				AD5B813A192E1E2300A7CDD2 /* Images.xcassets */,
@@ -150,6 +176,94 @@
 				AD5B814A192E1E2300A7CDD2 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AD76E9A5193214CF0096B676 /* LocalStorage */ = {
+			isa = PBXGroup;
+			children = (
+				AD76E9A6193214D80096B676 /* JCLocalStorageModule.h */,
+				AD76E9A7193214D80096B676 /* JCLocalStorageModule.m */,
+			);
+			path = LocalStorage;
+			sourceTree = "<group>";
+		};
+		AD76E9A9193228A70096B676 /* XMLHttpRequest */ = {
+			isa = PBXGroup;
+			children = (
+				AD76E9AA193228B10096B676 /* JCXMLHttpRequestModule.h */,
+				AD76E9AB193228B10096B676 /* JCXMLHttpRequestModule.m */,
+				AD76E9AD19322A720096B676 /* JCXMLHttpRequestAdapter.h */,
+				AD76E9AE19322A720096B676 /* JCXMLHttpRequestAdapter.m */,
+			);
+			path = XMLHttpRequest;
+			sourceTree = "<group>";
+		};
+		ADB6CB0C1931F99900B34BF8 /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				ADB6CB0D1931F99900B34BF8 /* Modules */,
+			);
+			path = Code;
+			sourceTree = "<group>";
+		};
+		ADB6CB0D1931F99900B34BF8 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				AD76E9A9193228A70096B676 /* XMLHttpRequest */,
+				AD76E9A5193214CF0096B676 /* LocalStorage */,
+				ADB6CB1F19320A9B00B34BF8 /* Timeout */,
+				ADB6CB1B1932012600B34BF8 /* FS */,
+				ADB6CB171931FBA300B34BF8 /* Exceptions */,
+				ADB6CB0F1931FA1C00B34BF8 /* Require */,
+				ADB6CB101931FA1C00B34BF8 /* Console */,
+				ADB6CB0E1931F9A700B34BF8 /* JCModule.h */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		ADB6CB0F1931FA1C00B34BF8 /* Require */ = {
+			isa = PBXGroup;
+			children = (
+				ADB6CB141931FAB500B34BF8 /* JCRequireModule.h */,
+				ADB6CB151931FAB500B34BF8 /* JCRequireModule.m */,
+			);
+			path = Require;
+			sourceTree = "<group>";
+		};
+		ADB6CB101931FA1C00B34BF8 /* Console */ = {
+			isa = PBXGroup;
+			children = (
+				ADB6CB111931FA2600B34BF8 /* JCConsoleModule.h */,
+				ADB6CB121931FA2600B34BF8 /* JCConsoleModule.m */,
+			);
+			path = Console;
+			sourceTree = "<group>";
+		};
+		ADB6CB171931FBA300B34BF8 /* Exceptions */ = {
+			isa = PBXGroup;
+			children = (
+				ADB6CB181931FBAE00B34BF8 /* JCExceptionHandlerModule.h */,
+				ADB6CB191931FBAE00B34BF8 /* JCExceptionHandlerModule.m */,
+			);
+			path = Exceptions;
+			sourceTree = "<group>";
+		};
+		ADB6CB1B1932012600B34BF8 /* FS */ = {
+			isa = PBXGroup;
+			children = (
+				ADB6CB1C1932012D00B34BF8 /* JCFSModule.h */,
+				ADB6CB1D1932012D00B34BF8 /* JCFSModule.m */,
+			);
+			path = FS;
+			sourceTree = "<group>";
+		};
+		ADB6CB1F19320A9B00B34BF8 /* Timeout */ = {
+			isa = PBXGroup;
+			children = (
+				ADB6CB2019320AA400B34BF8 /* JCTimeoutModule.h */,
+				ADB6CB2119320AA400B34BF8 /* JCTimeoutModule.m */,
+			);
+			path = Timeout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,8 +342,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD3C8DF719332B4200A42148 /* brain.bundle in Resources */,
 				AD5B8133192E1E2300A7CDD2 /* InfoPlist.strings in Resources */,
-				AD5B8158192E203400A7CDD2 /* JS in Resources */,
 				AD5B813B192E1E2300A7CDD2 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,9 +363,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADB6CB1E1932012D00B34BF8 /* JCFSModule.m in Sources */,
 				AD5B815B192E208D00A7CDD2 /* JCCore.m in Sources */,
 				AD5B8135192E1E2300A7CDD2 /* main.m in Sources */,
 				AD5B8139192E1E2300A7CDD2 /* JCAppDelegate.m in Sources */,
+				ADB6CB161931FAB500B34BF8 /* JCRequireModule.m in Sources */,
+				ADB6CB1A1931FBAE00B34BF8 /* JCExceptionHandlerModule.m in Sources */,
+				AD76E9AC193228B10096B676 /* JCXMLHttpRequestModule.m in Sources */,
+				ADB6CB2219320AA400B34BF8 /* JCTimeoutModule.m in Sources */,
+				AD76E9AF19322A720096B676 /* JCXMLHttpRequestAdapter.m in Sources */,
+				ADB6CB131931FA2600B34BF8 /* JCConsoleModule.m in Sources */,
+				AD76E9A8193214D80096B676 /* JCLocalStorageModule.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +496,7 @@
 				GCC_PREFIX_HEADER = "JSCore/JSCore-Prefix.pch";
 				INFOPLIST_FILE = "JSCore/JSCore-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "17A8CE65-7398-4197-BEA4-641F2194D3FC";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -387,6 +510,7 @@
 				GCC_PREFIX_HEADER = "JSCore/JSCore-Prefix.pch";
 				INFOPLIST_FILE = "JSCore/JSCore-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "17A8CE65-7398-4197-BEA4-641F2194D3FC";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -450,6 +574,7 @@
 				AD5B8153192E1E2300A7CDD2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AD5B8154192E1E2300A7CDD2 /* Build configuration list for PBXNativeTarget "JSCoreTests" */ = {
 			isa = XCConfigurationList;
@@ -458,6 +583,7 @@
 				AD5B8156192E1E2300A7CDD2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
