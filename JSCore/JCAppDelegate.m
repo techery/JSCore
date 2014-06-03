@@ -8,19 +8,19 @@
 
 #import "JCAppDelegate.h"
 #import "JCCore.h"
+#import "JCRootViewController.h"
 
 @import JavaScriptCore;
 
 @implementation JCAppDelegate
-{
-    JCCore *core;
-}
+
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    NSString *bundlePath = [[NSBundle mainBundle] pathForResource:@"brain" ofType:@"bundle"];
-    core = [[JCCore alloc] initWithBundle:[NSBundle bundleWithPath:bundlePath]];
+    
+    self.window.rootViewController = [JCRootViewController new];
     
     [self.window makeKeyAndVisible];
     return YES;

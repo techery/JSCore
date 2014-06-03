@@ -59,4 +59,9 @@
     return self.jsContext[@"__modules"][moduleName];
 }
 
+- (JSValue*)objectWithName:(NSString*)name
+{
+    return self.jsContext[name];
+}
+
 @end

@@ -29,6 +29,10 @@
 		ADB6CB1A1931FBAE00B34BF8 /* JCExceptionHandlerModule.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB6CB191931FBAE00B34BF8 /* JCExceptionHandlerModule.m */; };
 		ADB6CB1E1932012D00B34BF8 /* JCFSModule.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB6CB1D1932012D00B34BF8 /* JCFSModule.m */; };
 		ADB6CB2219320AA400B34BF8 /* JCTimeoutModule.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB6CB2119320AA400B34BF8 /* JCTimeoutModule.m */; };
+		ADEBDA13193E05D20099AA0B /* JCRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADEBDA0F193E05D20099AA0B /* JCRootViewController.m */; };
+		ADEBDA14193E05D20099AA0B /* JCTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADEBDA11193E05D20099AA0B /* JCTestViewController.m */; };
+		ADEBDA15193E05D20099AA0B /* JCTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADEBDA12193E05D20099AA0B /* JCTestViewController.xib */; };
+		ADEBDA1E193E06220099AA0B /* JCCounterScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = ADEBDA1D193E06220099AA0B /* JCCounterScreen.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +82,13 @@
 		ADB6CB1D1932012D00B34BF8 /* JCFSModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCFSModule.m; sourceTree = "<group>"; };
 		ADB6CB2019320AA400B34BF8 /* JCTimeoutModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCTimeoutModule.h; sourceTree = "<group>"; };
 		ADB6CB2119320AA400B34BF8 /* JCTimeoutModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCTimeoutModule.m; sourceTree = "<group>"; };
+		ADEBDA0E193E05D20099AA0B /* JCRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCRootViewController.h; sourceTree = "<group>"; };
+		ADEBDA0F193E05D20099AA0B /* JCRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCRootViewController.m; sourceTree = "<group>"; };
+		ADEBDA10193E05D20099AA0B /* JCTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCTestViewController.h; sourceTree = "<group>"; };
+		ADEBDA11193E05D20099AA0B /* JCTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCTestViewController.m; sourceTree = "<group>"; };
+		ADEBDA12193E05D20099AA0B /* JCTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JCTestViewController.xib; sourceTree = "<group>"; };
+		ADEBDA1C193E06220099AA0B /* JCCounterScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCCounterScreen.h; sourceTree = "<group>"; };
+		ADEBDA1D193E06220099AA0B /* JCCounterScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCCounterScreen.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +148,7 @@
 		AD5B812E192E1E2300A7CDD2 /* JSCore */ = {
 			isa = PBXGroup;
 			children = (
+				ADEBDA03193E04980099AA0B /* Example */,
 				AD3C8DF619332B4200A42148 /* brain.bundle */,
 				ADB6CB0C1931F99900B34BF8 /* Code */,
 				AD5B8137192E1E2300A7CDD2 /* JCAppDelegate.h */,
@@ -266,6 +278,36 @@
 			path = Timeout;
 			sourceTree = "<group>";
 		};
+		ADEBDA03193E04980099AA0B /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				ADEBDA0C193E05D20099AA0B /* Screens */,
+				ADEBDA0D193E05D20099AA0B /* ViewControllers */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		ADEBDA0C193E05D20099AA0B /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				ADEBDA1C193E06220099AA0B /* JCCounterScreen.h */,
+				ADEBDA1D193E06220099AA0B /* JCCounterScreen.m */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		ADEBDA0D193E05D20099AA0B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				ADEBDA0E193E05D20099AA0B /* JCRootViewController.h */,
+				ADEBDA0F193E05D20099AA0B /* JCRootViewController.m */,
+				ADEBDA10193E05D20099AA0B /* JCTestViewController.h */,
+				ADEBDA11193E05D20099AA0B /* JCTestViewController.m */,
+				ADEBDA12193E05D20099AA0B /* JCTestViewController.xib */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -343,6 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD3C8DF719332B4200A42148 /* brain.bundle in Resources */,
+				ADEBDA15193E05D20099AA0B /* JCTestViewController.xib in Resources */,
 				AD5B8133192E1E2300A7CDD2 /* InfoPlist.strings in Resources */,
 				AD5B813B192E1E2300A7CDD2 /* Images.xcassets in Resources */,
 			);
@@ -366,12 +409,15 @@
 				ADB6CB1E1932012D00B34BF8 /* JCFSModule.m in Sources */,
 				AD5B815B192E208D00A7CDD2 /* JCCore.m in Sources */,
 				AD5B8135192E1E2300A7CDD2 /* main.m in Sources */,
+				ADEBDA1E193E06220099AA0B /* JCCounterScreen.m in Sources */,
 				AD5B8139192E1E2300A7CDD2 /* JCAppDelegate.m in Sources */,
 				ADB6CB161931FAB500B34BF8 /* JCRequireModule.m in Sources */,
 				ADB6CB1A1931FBAE00B34BF8 /* JCExceptionHandlerModule.m in Sources */,
 				AD76E9AC193228B10096B676 /* JCXMLHttpRequestModule.m in Sources */,
 				ADB6CB2219320AA400B34BF8 /* JCTimeoutModule.m in Sources */,
+				ADEBDA14193E05D20099AA0B /* JCTestViewController.m in Sources */,
 				AD76E9AF19322A720096B676 /* JCXMLHttpRequestAdapter.m in Sources */,
+				ADEBDA13193E05D20099AA0B /* JCRootViewController.m in Sources */,
 				ADB6CB131931FA2600B34BF8 /* JCConsoleModule.m in Sources */,
 				AD76E9A8193214D80096B676 /* JCLocalStorageModule.m in Sources */,
 			);
