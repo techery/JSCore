@@ -13,9 +13,8 @@ typedef void(^JCCounterUpdateCallback)(NSNumber *value);
 @interface JCCounterScreen : NSObject
 
 @property (nonatomic, strong, readonly) RACSignal *valueSignal;
+@property (nonatomic, strong, readonly) RACCommand *incrementCommand;
 
 - (instancetype)initWithInternalScreen:(JSValue*)internalScreen;
-
-- (RACCommand*)increment;
 
 @end

@@ -33,10 +33,17 @@
     [super viewDidLoad];
     
     RAC(self.numberLabel, text) = [self.screen.valueSignal map:^id(id value) {
-        return [NSString stringWithFormat:@"%@", value];
+        return [value stringValue];
     }];
     
-    self.incButton.rac_command = self.screen.increment;
+    self.incButton.rac_command = self.screen.incrementCommand;
+    [self.incButton.rac_command.executing subscribeNext:^(id x) {
+        if ([x boolValue]) {
+            NSLog(@"Executing");
+        } else {
+            NSLog(@"Not executing");
+        }
+    }];
 }
 
 @end

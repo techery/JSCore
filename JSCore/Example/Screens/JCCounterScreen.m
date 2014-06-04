@@ -14,6 +14,7 @@
 
 @property (nonatomic, strong) JSValue *internalScreen;
 @property (nonatomic, strong) RACSignal *valueSignal;
+@property (nonatomic, strong) RACCommand *incrementCommand;
 
 @end
 
@@ -26,12 +27,9 @@
     if (self) {
         self.internalScreen = internalScreen;
         self.valueSignal = [JCSignalBridge racFromJS:self.internalScreen[@"valueSignal"]];
+        self.incrementCommand = [JCCommandBridge racFromJs:[self.internalScreen invokeMethod:@"increment" withArguments:nil]];
     }
     return self;
 }
 
-- (RACCommand*)increment
-{
-    return [JCCommandBridge racFromJs:[self.internalScreen invokeMethod:@"increment" withArguments:nil]];
-}
 @end
