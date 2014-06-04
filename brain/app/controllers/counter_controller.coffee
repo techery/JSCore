@@ -1,17 +1,14 @@
-Signal = require "../rx/signal"
-EmptySignal = require "../rx/empty_signal"
-Command = require "../rx/command"
+Rx = require "../rx/rx"
 
 module.exports = class Counter
   constructor: ->
     @value = 0
-    @valueSignal = new Signal()
+    @valueSignal = new Rx.Signal()
 
-    @incrementCommand = new Command (value) =>
-      @value++
-      @valueSignal.sendNext(@value)
+    @incrementCommand = new Rx.Command (value) =>
+      @increment()
+      new Rx.Signal.Empty()
 
-      new EmptySignal()
-
-
-
+  increment: ->
+    @value++
+    @valueSignal.sendNext(@value)

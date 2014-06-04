@@ -1,4 +1,8 @@
+EmptySignal = require "./empty_signal"
+
 module.exports = class Signal
+  @Empty: -> new EmptySignal()
+
   constructor: ->
     @nextObservers      = []
     @errorObservers     = []
