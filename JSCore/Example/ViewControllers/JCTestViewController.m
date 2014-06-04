@@ -12,18 +12,18 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *numberLabel;
 
-@property (nonatomic, strong) JCCounterViewModel *screen;
+@property (nonatomic, strong) JCCounterViewModel *viewModel;
 @property (weak, nonatomic) IBOutlet UIButton *incButton;
 
 @end
 
 @implementation JCTestViewController
 
-- (instancetype)initWithScreen:(JCCounterViewModel*)screen;
+- (instancetype)initWithScreen:(JCCounterViewModel*)viewModel;
 {
     self = [super init];
     if (self) {
-        self.screen = screen;
+        self.viewModel = viewModel;
     }
     return self;
 }
@@ -32,18 +32,12 @@
 {
     [super viewDidLoad];
     
-    RAC(self.numberLabel, text) = [self.screen.valueSignal map:^id(id value) {
+    RAC(self.numberLabel, text) = [self.viewModel.valueSignal map:^id(id value) {
         return [value stringValue];
     }];
     
-    self.incButton.rac_command = self.screen.incrementCommand;
-    [self.incButton.rac_command.executing subscribeNext:^(id x) {
-        if ([x boolValue]) {
-            NSLog(@"Executing");
-        } else {
-            NSLog(@"Not executing");
-        }
-    }];
+    self.incButton.rac_command = self.viewModel.incrementCommand;
+    RAC(self.incButton, hidden) = self.viewModel.incrementCommand.executing;
 }
 
 @end
