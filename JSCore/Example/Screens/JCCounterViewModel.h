@@ -9,8 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "JCBaseViewModel.h"
 
-typedef void(^JCCounterUpdateCallback)(NSNumber *value);
-
 @interface JCCounterViewModel : JCBaseViewModel
 
 @property (nonatomic, strong, readonly) RACSignal *valueSignal;

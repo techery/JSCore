@@ -16,4 +16,8 @@
 
 - (void)setup;
 
+- (RACSignal*)signalWithName:(NSString*)name;
+- (RACCommand*)commandWithName:(NSString*)name;
+- (RACCommand*)commandFromMethod:(NSString*)methodName;
+
 @end

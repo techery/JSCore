@@ -7,6 +7,8 @@
 //
 
 #import "JCBaseViewModel.h"
+#import "JCSignalBridge.h"
+#import "JCCommandBridge.h"
 
 @interface JCBaseViewModel ()
 
@@ -31,5 +33,21 @@
 {
     
 }
+
+- (RACSignal*)signalWithName:(NSString*)name
+{
+    return [JCSignalBridge racFromJS:self.viewModel[name]];
+}
+
+- (RACCommand*)commandWithName:(NSString*)name
+{
+    return [JCCommandBridge racFromJs:self.viewModel[name]];
+}
+
+- (RACCommand*)commandFromMethod:(NSString*)methodName
+{
+    return [JCCommandBridge racFromJs:[self.viewModel invokeMethod:methodName withArguments:nil]];
+}
+
 
 @end

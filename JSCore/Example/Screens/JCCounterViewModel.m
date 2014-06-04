@@ -7,11 +7,9 @@
 //
 
 #import "JCCounterViewModel.h"
-#import "JCSignalBridge.h"
-#import "JCCommandBridge.h"
+
 
 @interface JCCounterViewModel ()
-
 
 @property (nonatomic, strong) RACSignal *valueSignal;
 @property (nonatomic, strong) RACCommand *incrementCommand;
@@ -22,8 +20,8 @@
 
 - (void)setup
 {
-    self.valueSignal = [JCSignalBridge racFromJS:self.viewModel[@"valueSignal"]];
-    self.incrementCommand = [JCCommandBridge racFromJs:[self.viewModel invokeMethod:@"incrementCommand" withArguments:nil]];
+    self.valueSignal = [self signalWithName:@"valueSignal"];
+    self.incrementCommand = [self commandFromMethod:@"increment"];
 }
 
 @end
