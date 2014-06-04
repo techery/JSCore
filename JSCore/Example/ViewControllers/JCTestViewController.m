@@ -32,7 +32,7 @@
 {
     [super viewDidLoad];
     
-    RAC(self.numberLabel, text) = [RACObserve(self.screen, value) map:^id(id value) {
+    RAC(self.numberLabel, text) = [self.screen.valueSignal map:^id(id value) {
         return [NSString stringWithFormat:@"%@", value];
     }];
     

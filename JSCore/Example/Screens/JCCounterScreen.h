@@ -12,7 +12,7 @@ typedef void(^JCCounterUpdateCallback)(NSNumber *value);
 
 @interface JCCounterScreen : NSObject
 
-@property (nonatomic, assign, readonly) NSUInteger value;
+@property (nonatomic, strong, readonly) RACSignal *valueSignal;
 
 - (instancetype)initWithInternalScreen:(JSValue*)internalScreen;
 

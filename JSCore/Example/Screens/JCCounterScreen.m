@@ -7,11 +7,13 @@
 //
 
 #import "JCCounterScreen.h"
+#import "JCSignalBridge.h"
+#import "JCCommandBridge.h"
 
 @interface JCCounterScreen ()
 
 @property (nonatomic, strong) JSValue *internalScreen;
-@property (nonatomic, assign) NSUInteger value;
+@property (nonatomic, strong) RACSignal *valueSignal;
 
 @end
 
@@ -23,16 +25,13 @@
     self = [super init];
     if (self) {
         self.internalScreen = internalScreen;
+        self.valueSignal = [JCSignalBridge racFromJS:self.internalScreen[@"valueSignal"]];
     }
     return self;
 }
 
 - (RACCommand*)increment
 {
-    return [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
-        self.value++;
-        return [RACSignal empty];
-    }];
+    return [JCCommandBridge racFromJs:[self.internalScreen invokeMethod:@"increment" withArguments:nil]];
 }
-
 @end

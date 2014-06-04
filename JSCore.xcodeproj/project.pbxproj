@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		20E962542CDC4D2B83534BAE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54D6043177514747871079FE /* libPods.a */; };
+		50934511193F8E29009B57E1 /* JCSignalBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 50934510193F8E29009B57E1 /* JCSignalBridge.m */; };
+		50934514193F9727009B57E1 /* JCCommandBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 50934513193F9727009B57E1 /* JCCommandBridge.m */; };
 		AD3C8DF719332B4200A42148 /* brain.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AD3C8DF619332B4200A42148 /* brain.bundle */; };
 		AD5B8129192E1E2300A7CDD2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD5B8128192E1E2300A7CDD2 /* Foundation.framework */; };
 		AD5B812B192E1E2300A7CDD2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD5B812A192E1E2300A7CDD2 /* CoreGraphics.framework */; };
@@ -47,6 +49,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5093450F193F8E29009B57E1 /* JCSignalBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSignalBridge.h; sourceTree = "<group>"; };
+		50934510193F8E29009B57E1 /* JCSignalBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSignalBridge.m; sourceTree = "<group>"; };
+		50934512193F9727009B57E1 /* JCCommandBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCCommandBridge.h; sourceTree = "<group>"; };
+		50934513193F9727009B57E1 /* JCCommandBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCCommandBridge.m; sourceTree = "<group>"; };
 		54D6043177514747871079FE /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		87181C9835EB4F308C8702DD /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		AD3C8DF619332B4200A42148 /* brain.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = brain.bundle; path = brain/brain.bundle; sourceTree = SOURCE_ROOT; };
@@ -289,6 +295,10 @@
 			children = (
 				ADEBDA0C193E05D20099AA0B /* Screens */,
 				ADEBDA0D193E05D20099AA0B /* ViewControllers */,
+				5093450F193F8E29009B57E1 /* JCSignalBridge.h */,
+				50934510193F8E29009B57E1 /* JCSignalBridge.m */,
+				50934512193F9727009B57E1 /* JCCommandBridge.h */,
+				50934513193F9727009B57E1 /* JCCommandBridge.m */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -452,6 +462,8 @@
 				AD5B8135192E1E2300A7CDD2 /* main.m in Sources */,
 				ADEBDA1E193E06220099AA0B /* JCCounterScreen.m in Sources */,
 				AD5B8139192E1E2300A7CDD2 /* JCAppDelegate.m in Sources */,
+				50934514193F9727009B57E1 /* JCCommandBridge.m in Sources */,
+				50934511193F8E29009B57E1 /* JCSignalBridge.m in Sources */,
 				ADB6CB161931FAB500B34BF8 /* JCRequireModule.m in Sources */,
 				ADB6CB1A1931FBAE00B34BF8 /* JCExceptionHandlerModule.m in Sources */,
 				AD76E9AC193228B10096B676 /* JCXMLHttpRequestModule.m in Sources */,
