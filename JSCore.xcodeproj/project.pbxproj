@@ -35,7 +35,8 @@
 		ADEBDA13193E05D20099AA0B /* JCRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADEBDA0F193E05D20099AA0B /* JCRootViewController.m */; };
 		ADEBDA14193E05D20099AA0B /* JCTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADEBDA11193E05D20099AA0B /* JCTestViewController.m */; };
 		ADEBDA15193E05D20099AA0B /* JCTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADEBDA12193E05D20099AA0B /* JCTestViewController.xib */; };
-		ADEBDA1E193E06220099AA0B /* JCCounterScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = ADEBDA1D193E06220099AA0B /* JCCounterScreen.m */; };
+		ADEBDA1E193E06220099AA0B /* JCCounterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ADEBDA1D193E06220099AA0B /* JCCounterViewModel.m */; };
+		ADFEE56E193FC37F0028CF0D /* JCBaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ADFEE56D193FC37F0028CF0D /* JCBaseViewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,8 +97,10 @@
 		ADEBDA10193E05D20099AA0B /* JCTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCTestViewController.h; sourceTree = "<group>"; };
 		ADEBDA11193E05D20099AA0B /* JCTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCTestViewController.m; sourceTree = "<group>"; };
 		ADEBDA12193E05D20099AA0B /* JCTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JCTestViewController.xib; sourceTree = "<group>"; };
-		ADEBDA1C193E06220099AA0B /* JCCounterScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCCounterScreen.h; sourceTree = "<group>"; };
-		ADEBDA1D193E06220099AA0B /* JCCounterScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCCounterScreen.m; sourceTree = "<group>"; };
+		ADEBDA1C193E06220099AA0B /* JCCounterViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCCounterViewModel.h; sourceTree = "<group>"; };
+		ADEBDA1D193E06220099AA0B /* JCCounterViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCCounterViewModel.m; sourceTree = "<group>"; };
+		ADFEE56C193FC37F0028CF0D /* JCBaseViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCBaseViewModel.h; sourceTree = "<group>"; };
+		ADFEE56D193FC37F0028CF0D /* JCBaseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCBaseViewModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -306,8 +309,10 @@
 		ADEBDA0C193E05D20099AA0B /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				ADEBDA1C193E06220099AA0B /* JCCounterScreen.h */,
-				ADEBDA1D193E06220099AA0B /* JCCounterScreen.m */,
+				ADEBDA1C193E06220099AA0B /* JCCounterViewModel.h */,
+				ADEBDA1D193E06220099AA0B /* JCCounterViewModel.m */,
+				ADFEE56C193FC37F0028CF0D /* JCBaseViewModel.h */,
+				ADFEE56D193FC37F0028CF0D /* JCBaseViewModel.m */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -460,9 +465,10 @@
 				ADB6CB1E1932012D00B34BF8 /* JCFSModule.m in Sources */,
 				AD5B815B192E208D00A7CDD2 /* JCCore.m in Sources */,
 				AD5B8135192E1E2300A7CDD2 /* main.m in Sources */,
-				ADEBDA1E193E06220099AA0B /* JCCounterScreen.m in Sources */,
+				ADEBDA1E193E06220099AA0B /* JCCounterViewModel.m in Sources */,
 				AD5B8139192E1E2300A7CDD2 /* JCAppDelegate.m in Sources */,
 				50934514193F9727009B57E1 /* JCCommandBridge.m in Sources */,
+				ADFEE56E193FC37F0028CF0D /* JCBaseViewModel.m in Sources */,
 				50934511193F8E29009B57E1 /* JCSignalBridge.m in Sources */,
 				ADB6CB161931FAB500B34BF8 /* JCRequireModule.m in Sources */,
 				ADB6CB1A1931FBAE00B34BF8 /* JCExceptionHandlerModule.m in Sources */,

@@ -27,14 +27,14 @@
     
     JSValue *counter = [self.core objectWithName:@"counter"];
     
-    JCCounterScreen *screen1 = [[JCCounterScreen alloc] initWithInternalScreen:counter];
+    JCCounterViewModel *screen1 = [[JCCounterViewModel alloc] initWithInternalViewModel:counter];
  
     JCTestViewController *vc1 = [[JCTestViewController alloc] initWithScreen:screen1];
     
     [self addChildViewController:vc1];
     [self.view addSubview:vc1.view];
     
-    JCCounterScreen *screen2 = [[JCCounterScreen alloc] initWithInternalScreen:counter];
+    JCCounterViewModel *screen2 = [[JCCounterViewModel alloc] initWithInternalViewModel:counter];
     JCTestViewController *vc2 = [[JCTestViewController alloc] initWithScreen:screen2];
     
     vc2.view.center = CGPointMake(vc2.view.center.x, vc2.view.center.y + vc2.view.frame.size.height);

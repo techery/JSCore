@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "JCCounterScreen.h"
+#import "JCCounterViewModel.h"
 
 @interface JCTestViewController : UIViewController
 
-- (instancetype)initWithScreen:(JCCounterScreen*)screen;
+- (instancetype)initWithScreen:(JCCounterViewModel*)screen;
 
 @end

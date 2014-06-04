@@ -7,14 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "JCBaseViewModel.h"
 
 typedef void(^JCCounterUpdateCallback)(NSNumber *value);
 
-@interface JCCounterScreen : NSObject
+@interface JCCounterViewModel : JCBaseViewModel
 
 @property (nonatomic, strong, readonly) RACSignal *valueSignal;
 @property (nonatomic, strong, readonly) RACCommand *incrementCommand;
-
-- (instancetype)initWithInternalScreen:(JSValue*)internalScreen;
 
 @end

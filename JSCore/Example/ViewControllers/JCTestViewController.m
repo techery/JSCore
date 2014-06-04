@@ -12,14 +12,14 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *numberLabel;
 
-@property (nonatomic, strong) JCCounterScreen *screen;
+@property (nonatomic, strong) JCCounterViewModel *screen;
 @property (weak, nonatomic) IBOutlet UIButton *incButton;
 
 @end
 
 @implementation JCTestViewController
 
-- (instancetype)initWithScreen:(JCCounterScreen*)screen;
+- (instancetype)initWithScreen:(JCCounterViewModel*)screen;
 {
     self = [super init];
     if (self) {
