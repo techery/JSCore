@@ -11,6 +11,7 @@
 @interface JCCounterScreen ()
 
 @property (nonatomic, strong) JSValue *internalScreen;
+@property (nonatomic, assign) NSUInteger value;
 
 @end
 
@@ -26,24 +27,12 @@
     return self;
 }
 
-- (NSUInteger)counterValue
+- (RACCommand*)increment
 {
-    return [[self.internalScreen invokeMethod:@"counterValue" withArguments:nil] toUInt32];
-}
-
-- (void)increment
-{
-    [self.internalScreen invokeMethod:@"increment" withArguments:nil];
-}
-
-- (void)addObserver:(JCCounterUpdateCallback)callback
-{
-    [self.internalScreen invokeMethod:@"addObserver" withArguments:@[callback]];
-}
-
-- (void)removeObserver:(JCCounterUpdateCallback)callback
-{
-    [self.internalScreen invokeMethod:@"removeObserver" withArguments:@[callback]];
+    return [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+        self.value++;
+        return [RACSignal empty];
+    }];
 }
 
 @end

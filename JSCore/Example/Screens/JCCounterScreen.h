@@ -12,12 +12,10 @@ typedef void(^JCCounterUpdateCallback)(NSNumber *value);
 
 @interface JCCounterScreen : NSObject
 
+@property (nonatomic, assign, readonly) NSUInteger value;
+
 - (instancetype)initWithInternalScreen:(JSValue*)internalScreen;
 
-- (NSUInteger)counterValue;
-- (void)increment;
-
-- (void)addObserver:(JCCounterUpdateCallback)callback;
-- (void)removeObserver:(JCCounterUpdateCallback)callback;
+- (RACCommand*)increment;
 
 @end

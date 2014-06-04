@@ -1,17 +1,21 @@
 module.exports = class Counter
   constructor: ->
     @value = 0
-    @observers = []
+    @observers = {}
 
   counterValue: ->
     @value
 
   increment: ->
     @value++
-    observer(@value) for observer in @observers
+    @notify("update", @value)
 
-  addObserver: (observer) ->
-    @observers.push observer
+  addObserver: (event, observer) ->
+    @observers[event] ?= []
+    @observers[event].push observer
 
-  removeObserver: (observer) ->
-    delete @observers[@observers.indexOf(observer)]
+  notify: (event, payload) ->
+    observer(payload) for observer in @observers[event]
+
+  cleanup: ->
+    delete @observers

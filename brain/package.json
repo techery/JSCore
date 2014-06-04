@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "underscore": "~1.6.0",
-    "javascript-state-machine": "~2.3.2"
+    "javascript-state-machine": "~2.3.2",
+    "rx": "~2.2.24"
   }
 }

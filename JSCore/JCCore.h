@@ -12,8 +12,10 @@
 @interface JCCore : NSObject
 
 - (instancetype)initWithBundle:(NSBundle *)bundle;
+
 - (void)addModule:(id<JCModule>)module;
 
 - (JSValue*)objectWithName:(NSString*)name;
+- (JSValue*)evaluateScript:(NSString*)script;
 
 @end

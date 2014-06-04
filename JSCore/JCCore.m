@@ -33,6 +33,7 @@
     if (self) {
         self.bundle = bundle;
         self.modules = [NSMutableArray new];
+        
         self.jsContext = [JSContext new];
         self.jsContext[@"__modules"] = @{};
         
@@ -62,6 +63,11 @@
 - (JSValue*)objectWithName:(NSString*)name
 {
     return self.jsContext[name];
+}
+
+- (JSValue*)evaluateScript:(NSString*)script
+{
+    return [self.jsContext evaluateScript:script];
 }
 
 @end

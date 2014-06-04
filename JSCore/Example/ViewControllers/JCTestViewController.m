@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *numberLabel;
 
 @property (nonatomic, strong) JCCounterScreen *screen;
+@property (weak, nonatomic) IBOutlet UIButton *incButton;
 
 @end
 
@@ -27,25 +28,15 @@
     return self;
 }
 
-- (void)viewWillAppear:(BOOL)animated
+- (void)viewDidLoad
 {
-    [self updateLabel];
+    [super viewDidLoad];
     
-    __weak typeof(self) weakSelf = self;
-    
-    [self.screen addObserver:^(NSNumber *value) {
-        [weakSelf updateLabel];
+    RAC(self.numberLabel, text) = [RACObserve(self.screen, value) map:^id(id value) {
+        return [NSString stringWithFormat:@"%@", value];
     }];
-}
-
-- (IBAction)increment:(id)sender
-{
-    [self.screen increment];
-}
-
-- (void)updateLabel
-{
-    self.numberLabel.text = [NSString stringWithFormat:@"%d", self.screen.counterValue];
+    
+    self.incButton.rac_command = self.screen.increment;
 }
 
 @end

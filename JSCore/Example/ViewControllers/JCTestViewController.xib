@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JCTestViewController">
             <connections>
+                <outlet property="incButton" destination="2fA-zG-ax6" id="tmM-lL-9mH"/>
                 <outlet property="numberLabel" destination="GJd-UJ-Qfx" id="brW-i9-YRV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -21,9 +22,6 @@
                     <state key="normal" title="Add">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
-                    <connections>
-                        <action selector="increment:" destination="-1" eventType="touchUpInside" id="eCF-qe-NCC"/>
-                    </connections>
                 </button>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJd-UJ-Qfx">
                     <rect key="frame" x="202" y="89" width="51" height="21"/>
