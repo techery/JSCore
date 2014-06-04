@@ -21,7 +21,7 @@
 - (void)setup
 {
     self.valueSignal = [self signalWithName:@"valueSignal"];
-    self.incrementCommand = [self commandFromMethod:@"increment"];
+    self.incrementCommand = [self commandWithName:@"incrementCommand"];
 }
 
 @end
