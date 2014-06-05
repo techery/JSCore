@@ -10,9 +10,9 @@
 
 @interface JCTestViewController ()
 
-@property (weak, nonatomic) IBOutlet UILabel *numberLabel;
-
 @property (nonatomic, strong) JCCounterViewModel *viewModel;
+
+@property (weak, nonatomic) IBOutlet UILabel *numberLabel;
 @property (weak, nonatomic) IBOutlet UIButton *incButton;
 
 @end
@@ -32,12 +32,10 @@
 {
     [super viewDidLoad];
     
-    RAC(self.numberLabel, text) = [self.viewModel.valueSignal map:^id(id value) {
-        return [value stringValue];
-    }];
+    RAC(self.numberLabel, text) = self.viewModel.valueSignal;
+    RAC(self.incButton, hidden) = self.viewModel.incrementCommand.executing;
     
     self.incButton.rac_command = self.viewModel.incrementCommand;
-    RAC(self.incButton, hidden) = self.viewModel.incrementCommand.executing;
 }
 
 @end

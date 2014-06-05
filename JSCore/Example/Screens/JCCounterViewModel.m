@@ -20,7 +20,10 @@
 
 - (void)setup
 {
-    self.valueSignal = [self signalWithName:@"valueSignal"];
+    self.valueSignal = [[self signalWithName:@"valueSignal"] map:^id(id value) {
+        return [value stringValue];
+    }];
+    
     self.incrementCommand = [self commandWithName:@"incrementCommand"];
 }
 
