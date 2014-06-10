@@ -12,6 +12,7 @@
 
 - (void)setItem:(NSString*)key :(NSString*)value;
 - (NSString*)getItem:(NSString*)key;
+- (void)removeItem:(NSString*)key;
 
 @end
 
@@ -34,6 +35,11 @@
 - (NSString*)getItem:(NSString*)key
 {
     return [[NSUserDefaults standardUserDefaults] valueForKey:key];
+}
+
+- (void)removeItem:(NSString*)key;
+{
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:key];
 }
 
 @end
