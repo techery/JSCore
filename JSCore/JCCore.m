@@ -21,6 +21,8 @@
 @property (nonatomic, strong) JSContext *jsContext;
 @property (nonatomic, strong) NSMutableArray *modules;
 
+@property (nonatomic, strong) UIWebView *webView;
+
 @end
 
 @implementation JCCore
@@ -34,7 +36,14 @@
         self.bundle = bundle;
         self.modules = [NSMutableArray new];
         
-        self.jsContext = [JSContext new];
+        self.webView = [[UIWebView alloc] initWithFrame:CGRectZero];
+        
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
+        [NSClassFromString(@"WebView") performSelector:@selector(_enableRemoteInspector)];
+#pragma clang diagnostic pop
+        
+        self.jsContext = [self.webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
         self.jsContext[@"__modules"] = @{};
         
         [self addModule:[JCExceptionHandlerModule new]];
