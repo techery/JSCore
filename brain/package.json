@@ -13,6 +13,7 @@
     "gulp-concat": "~2.2.0",
     "gulp-mocha": "~0.4.1",
     "mocha": "~1.19.0",
+    "chai": "~1.9.1",
     "gulp-clean": "~0.2.4",
     "vinyl-transform": "0.0.1",
     "gulp-tap": "~0.1.1",

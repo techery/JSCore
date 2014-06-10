@@ -18,7 +18,7 @@ gulp.task('watch', function() {
     gulp.watch(['app/**'], ['default']);
 });
 
-gulp.task('runspecs', function() {
+gulp.task('spec', function() {
     return gulp
             .src(['specs/*.js'], { read: false })
             .pipe(mocha({ reporter: 'list' }))
