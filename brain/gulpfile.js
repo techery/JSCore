@@ -8,7 +8,12 @@ var gulp   = require('gulp'          ),
     pkg    = require('./package.json'),
     clean  = require('gulp-clean'    );
 
-gulp.task("default", ["clean", "compile-coffee", "copy-npm-dependency"]);
+gulp.task("default", ["clean", "copy-js", "compile-coffee", "copy-npm-dependency"]);
+
+gulp.task('copy-js', function() {
+ return gulp.src("app/**/*.js")
+    .pipe(gulp.dest("./brain.bundle/"));
+});
 
 gulp.task("compile-coffee", function() {
   return gulp
