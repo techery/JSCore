@@ -26,7 +26,7 @@ gulp.task('watch', function() {
 
 gulp.task('spec', function() {
   return gulp
-          .src(['specs/*.coffee'], { read: false })
+          .src(['spec/**/*_spec.coffee'], { read: false })
           .pipe(mocha({ reporter: 'list' }))
           .on('error', util.log);
 });
