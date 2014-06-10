@@ -1,3 +1,6 @@
+require('coffee-script/register');
+
+
 var gulp   = require('gulp'          ),
     coffee = require('gulp-coffee'   ),
     util   = require('gulp-util'     ),
@@ -20,7 +23,7 @@ gulp.task('watch', function() {
 
 gulp.task('spec', function() {
     return gulp
-            .src(['specs/*.js'], { read: false })
+            .src(['specs/*.coffee'], { read: false })
             .pipe(mocha({ reporter: 'list' }))
             .on('error', util.log);
 });

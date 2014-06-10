@@ -7,6 +7,7 @@
   "author": "Sergey Zenchenko",
   "license": "ISC",
   "devDependencies": {
+    "coffee-script": "1.7.1",
     "gulp": "~3.6.2",
     "gulp-coffee": "~1.4.3",
     "gulp-util": "~2.2.14",
