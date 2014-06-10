@@ -9,7 +9,7 @@ module.exports = class AppController
 
   constructor: (@config, @stateMachine) ->
     @stateMachine.onlogin = =>
-      console.log("Login")
+      console.log('Login')
 
     @sessionController = new SessionController()
 

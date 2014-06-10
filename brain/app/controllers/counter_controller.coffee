@@ -1,4 +1,4 @@
-Rx = require "../rx/rx"
+Rx = require '../rx/rx'
 
 module.exports = class Counter
   constructor: ->

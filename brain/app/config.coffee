@@ -1,5 +1,5 @@
 AppConfig = {
-  serverURL: "http://test.com"
+  serverURL: 'http://test.com'
   restAPIPort: 80
   mqttPort: 8444
 }

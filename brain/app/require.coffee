@@ -1,25 +1,25 @@
 fs = nativeRequire 'fs'
 
-allowedExtenstions = ["js", "json"]
+allowedExtenstions = ['js', 'json']
 
 ModuleCache = {}
 
 findModule = (moduleName, folder) ->
-  path = folder + "/node_modules/" + moduleName
+  path = folder + '/node_modules/' + moduleName
   pathExists(path) and path or findExtenstionForFile(path)
 
 isModuleFolder = (path) ->
-  path.lastIndexOf(".js") is -1
+  path.lastIndexOf('.js') is -1
 
 requireNodeModuleFolder = (path) ->
-  indexPath = path + "/index.js"
-  packagePath = path + "/package.json"
+  indexPath = path + '/index.js'
+  packagePath = path + '/package.json'
 
   if pathExists(indexPath)
     nativeRequire(indexPath)
   else if pathExists(packagePath)
     pckg = nativeRequire(packagePath)
-    nativeRequire(path + "/" + pckg.main)
+    nativeRequire(path + '/' + pckg.main)
   else
     null
 
@@ -39,14 +39,14 @@ requireNodeModule = (moduleName, currentPath) ->
     ModuleCache[moduleName] or ModuleCache[moduleName] = nativeRequire(moduleName)
 
 getParentFolder = (path) ->
-  path.substring(0, path.lastIndexOf("/"));
+  path.substring(0, path.lastIndexOf('/'));
 
 pathExists = (path) ->
   fs.existsSync(path)
 
 findExtenstionForFile = (filePath) ->
   for ext in allowedExtenstions
-    path = filePath + "." + ext
+    path = filePath + '.' + ext
     if pathExists(path)
       return path;
 
@@ -60,12 +60,12 @@ hasPrefix = (str, prefixes) ->
   return false
 
 requireFile = (fileName, currentFilePath) ->
-  filePath = getParentFolder(currentFilePath) + "/" + fileName
+  filePath = getParentFolder(currentFilePath) + '/' + fileName
   file = findExtenstionForFile(filePath)
   ModuleCache[file] or ModuleCache[file] = nativeRequire(file)
 
 require = (fileName, currentFilePath) ->
-  if hasPrefix(fileName, ["./", "../", "/"])
+  if hasPrefix(fileName, ['./', '../', '/'])
     requireFile(fileName, currentFilePath)
   else
     requireNodeModule(fileName, currentFilePath)
